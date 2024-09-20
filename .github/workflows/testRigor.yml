@@ -6,7 +6,7 @@ name: testRigor
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,9 +28,9 @@ jobs:
             -H 'auth-token: 85fe08db-48ba-4239-bf2a-c1e4a7767520' \
             --data '{"forceCancelPreviousTesting":true,"storedValues":{"storedValueName1":"Value"}}' \
             https://api.testrigor.com/api/v1/apps/LcNzt9oHGZNa9oeL4/retest
-          
+
           sleep 10
-          
+
           while true
           do
             echo " "
