@@ -42,7 +42,7 @@ jobs:
             body=$(echo "$response" | sed -n '/{/,/}/p')
             echo "Status code: " $code
             echo "Response: " $body
-            # case $code in
+            case $code in
               4*|5*)
                 # 400 or 500 errors
                 echo "Error calling API"
@@ -67,3 +67,4 @@ jobs:
                 exit 1
               esac
             sleep 10
+          done    
